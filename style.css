@@ -1,0 +1,144 @@
+/** -- KM Menu 01 using CSS - by Med Reda Kamal --
+    * Github : www.github.com/medredakamal
+    * Portfolio : www.medredakamal.dev
+    * LinkedIn : www.linkedin.com/in/medredakamal 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Wallpaper */
+body {
+  background: url("./wallpaper.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Fixing the toggle button & Navbar to the screen */
+.km-navbar,
+.km-menu-btn,
+.km-navbar-container {
+  position: fixed;
+}
+
+/* Menu Button */
+.km-menu-btn {
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  background-image: url("./assets/menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Remove Outline (on focus-visible) */
+.km-menu-btn:focus-visible {
+  outline: none !important;
+}
+
+/* Show Navbar (on button toggle) */
+body.shownavbar .km-navbar-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Change Menu Icon (open/close) */
+body.shownavbar .km-menu-btn {
+  background-image: url("./assets/close.svg");
+}
+
+/* Navbar Container & Navbar */
+.km-navbar-container {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.km-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.km-navbar a {
+  position: relative;
+  color: #f9f9f9;
+  font-size: 32px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 20px 0;
+  width: 300px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+/* Navbar bottom border (on hover) */
+.km-navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: #f7f7f7;
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: 0.4s;
+}
+.km-navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Navbar animation (on navbar toggle) */
+body.shownavbar .km-navbar a {
+  animation: appear 0.3s backwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    translate: 0 50px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Med Reda Kamal (author) */
+.km-author {
+  z-index: 3;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: end;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+}
+
+.km-author img {
+  border-radius: 100px;
+  padding: 0;
+  margin-bottom: 7px;
+}
