@@ -2,14 +2,14 @@
 
 A wonderful & simple navbar with background effect, animations and more...!
 
-↪ [Live Demo](https://medredakamal.github.io/km-menus01-css/)
+↪ [Live Demo](https://medredakamal.github.io/km-menus-01-css/)
 
 If you are a developer, try to help this repository to get optimized with some pull requests!
 I would love to see that . . .
 
 ## Overview
 
-![ProjectOverview](https://github.com/medredakamal/km-menus01-css/raw/main/screenshot.gif)
+![ProjectOverview](https://github.com/medredakamal/km-menus-01-css/raw/main/screenshot.gif)
 
 ## Contributing
 
